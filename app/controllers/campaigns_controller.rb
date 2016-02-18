@@ -19,10 +19,10 @@ class CampaignsController < ApplicationController
  end
 
  def show
-   @campaign = Campaign.find_by_id params[:id]
+   @campaign = Campaign.find params[:id]
    #find_by method will return nil, but in find, it will raise an error
    # The default render is show
-  #  render :show
+   #  render :show
  end
 
  def index

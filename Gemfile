@@ -44,6 +44,8 @@ group :development, :test do
   gem 'byebug'
   gem "nyan-cat-formatter"
   gem 'capybara'
+  gem 'launchy'
+  gem 'simplecov', :require => false
 end
 
 group :development do

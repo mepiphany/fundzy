@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       :email, :password, :pasword_confirmation]))
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_path, notice: "successful"
+      redirect_to root_path, notice: "Account Created!"
     else
       flash[:alert] ="Fail!"
       render :new

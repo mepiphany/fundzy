@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/spec/support/login_helpers.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/spec/support/login_helpers.rb": [
         1,
         null,
         1,
@@ -11,7 +11,7 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/app/controllers/campaigns_controller.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/app/controllers/campaigns_controller.rb": [
         1,
         1,
         null,
@@ -22,6 +22,8 @@
         1,
         6,
         6,
+        6,
+        null,
         null,
         6,
         6,
@@ -50,13 +52,17 @@
         null,
         null,
         1,
-        9,
-        9,
-        9,
-        6,
         null,
-        3,
-        3,
+        null,
+        null,
+        6,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
         null,
         null,
         null,
@@ -69,23 +75,23 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/app/controllers/application_controller.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null,
         1,
-        33,
+        30,
         null,
         null,
         1,
-        14,
+        20,
         null,
         1,
         null,
         1,
-        26,
+        32,
         null,
         1,
         null,
@@ -94,7 +100,7 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/spec/controllers/pledges_controller_spec.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/spec/controllers/pledges_controller_spec.rb": [
         1,
         null,
         1,
@@ -184,7 +190,7 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/app/controllers/pledges_controller.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/app/controllers/pledges_controller.rb": [
         1,
         1,
         null,
@@ -218,7 +224,7 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/spec/controllers/sessions_controller_spec.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/spec/controllers/sessions_controller_spec.rb": [
         1,
         null,
         1,
@@ -303,7 +309,7 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/app/controllers/sessions_controller.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/app/controllers/sessions_controller.rb": [
         1,
         1,
         null,
@@ -328,7 +334,7 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/spec/controllers/users_controller_spec.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/spec/controllers/users_controller_spec.rb": [
         1,
         null,
         1,
@@ -398,7 +404,7 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/app/controllers/users_controller.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/app/controllers/users_controller.rb": [
         1,
         1,
         4,
@@ -417,7 +423,7 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/spec/features/campaigns_spec.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/spec/features/campaigns_spec.rb": [
         1,
         null,
         1,
@@ -451,7 +457,7 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/spec/features/sessions_spec.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/spec/features/sessions_spec.rb": [
         1,
         null,
         1,
@@ -490,7 +496,7 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/spec/features/users_spec.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/spec/features/users_spec.rb": [
         1,
         null,
         1,
@@ -541,7 +547,7 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/spec/helpers/pledges_helper_spec.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/spec/helpers/pledges_helper_spec.rb": [
         1,
         null,
         null,
@@ -558,7 +564,7 @@
         1,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/spec/helpers/sessions_helper_spec.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/spec/helpers/sessions_helper_spec.rb": [
         1,
         null,
         null,
@@ -575,7 +581,7 @@
         1,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/spec/models/campaign_spec.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/spec/models/campaign_spec.rb": [
         1,
         null,
         1,
@@ -629,32 +635,51 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/app/models/campaign.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/app/models/campaign.rb": [
         1,
-        1,
-        1,
+        null,
+        null,
         null,
         1,
         null,
         1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/spec/models/pledge_spec.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/spec/models/pledge_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/app/models/pledge.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/app/models/pledge.rb": [
         1,
         1,
         1,
         null,
         1
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/spec/models/user_spec.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -721,7 +746,7 @@
         null,
         null
       ],
-      "/Users/Chante/Codecore/day_36_ajax/fundsy/app/models/user.rb": [
+      "/Users/Chante/Codecore/day_37/fundsy/app/models/user.rb": [
         1,
         null,
         1,
@@ -740,6 +765,6 @@
         null
       ]
     },
-    "timestamp": 1456962809
+    "timestamp": 1457032205
   }
 }

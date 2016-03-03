@@ -7,6 +7,8 @@
 
 <p>End Date: <%= formatted_date_time(@campaign.end_date) %>
 
+<%= image_tag @campaign.image.url(:large) %>
+
 <%= link_to "Edit", edit_campaign_path(@campaign), class: "btn btn-info" %>
 <%= link_to "Destroy", @campaign,
             method: :delete,

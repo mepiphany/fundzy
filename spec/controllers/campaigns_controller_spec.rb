@@ -184,7 +184,7 @@ RSpec.describe CampaignsController, type: :controller do
       end
 
       it "redirect to the campaign show page" do
-        expect(response).to redirect_to(campaign_path(campaign))
+        expect(response).to redirect_to(campaign_path(campaign.reload!))
         # when you render you get 200
       end
 

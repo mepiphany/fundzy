@@ -29,7 +29,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'friendly_id'
-
+gem 'carrierwave'
+gem 'quiet_assets'
+gem 'mini_magick'
+gem 'fog'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

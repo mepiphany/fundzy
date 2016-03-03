@@ -6,7 +6,7 @@ class CampaignsController < ApplicationController
   end
 
   def create
-    campaign_params = params.require(:campaign).permit(:name, :goal, :description, :end_date)
+    campaign_params = params.require(:campaign).permit(:name, :goal, :description, :end_date, :image)
     @campaign = Campaign.new(campaign_params)
     @campaign.user = current_user
 
@@ -33,7 +33,7 @@ class CampaignsController < ApplicationController
  end
 
  def edit
-   @campaign = Campaign.find params[:id]
+   @campaign = Campaign.friendly.find params[:id]
 
  end
 
@@ -53,7 +53,7 @@ class CampaignsController < ApplicationController
 end
 
 def destroy
-  campaign = current_user.campaigns.find params[:id]
+  campaign = current_user.campaigns.friendly.find params[:id]
   campaign.destroy
   redirect_to root_path, alert: "destroyed"
 end

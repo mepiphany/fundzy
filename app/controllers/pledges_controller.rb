@@ -2,7 +2,7 @@ class PledgesController < ApplicationController
   before_action :authenticate_user
 
   def create
-    @campaign = Campaign.find params[:campaign_id]
+    @campaign = Campaign.friendly.find params[:campaign_id]
     @pledge = Pledge.new pledge_params
     @pledge.campaign = @campaign
     @pledge.user = current_user
@@ -13,7 +13,7 @@ class PledgesController < ApplicationController
 
   def destroy
     pledge   = current_user.pledges.find params[:id]
-    campaign = Campaign.find params[:campaign_id]
+    campaign = Campaign.friendly.find params[:campaign_id]
 
     pledge.destroy
     redirect_to campaign

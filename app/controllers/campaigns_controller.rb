@@ -9,7 +9,7 @@ class CampaignsController < ApplicationController
     campaign_params = params.require(:campaign).permit(:name, :goal, :description, :end_date)
     @campaign = Campaign.new(campaign_params)
     @campaign.user = current_user
-    
+
   # this sends a successful empty HTTP response (200)
     flash[:notice] = "Campaign Created!"
     if @campaign.save
@@ -21,7 +21,7 @@ class CampaignsController < ApplicationController
  end
 
  def show
-   @campaign = Campaign.find params[:id]
+   @campaign = Campaign.friendly.find params[:id]
    #find_by method will return nil, but in find, it will raise an error
    # The default render is show
    #  render :show
@@ -38,7 +38,11 @@ class CampaignsController < ApplicationController
  end
 
  def update
-   @campaign = Campaign.find params[:id]
+   # we need to force the slug to be nil before updating it in order to have
+   # FriendlyId generate a new slug for us. We're using `history` option with
+   # FriendlyId so old urls will still work.
+   @campaign.slug = nil
+   @campaign = Campaign.friendly.find params[:id]
    campaign_params = params.require(:campaign).permit(:name, :description, :goal, :end_date)
    if @campaign.update (campaign_params)
    redirect_to campaign_path(@campaign), notice: "campaign"

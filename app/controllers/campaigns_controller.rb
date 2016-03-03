@@ -7,7 +7,9 @@ class CampaignsController < ApplicationController
 
   def create
     campaign_params = params.require(:campaign).permit(:name, :goal, :description, :end_date)
-    @campaign = Campaign.create(campaign_params)
+    @campaign = Campaign.new(campaign_params)
+    @campaign.user = current_user
+    
   # this sends a successful empty HTTP response (200)
     flash[:notice] = "Campaign Created!"
     if @campaign.save

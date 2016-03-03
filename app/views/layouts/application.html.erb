@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Welcome to fund.sy</title>
+  <title>Welcome to Fund.sy</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
-    <% if user_logged_in? %>
-      <%= current_user.full_name %>
-    <% else %>
-      <%= link_to "Sign Up", new_user_path %>
-    <% end %>
-      <%= link_to "New Campaign", new_campaign_path %>
-    <%= notice || alert %>
 
+<div class="container">
+  <%# for the layout, we must need to use the full path, the app won't recogized where the header may be. %>
+  <%= render "/layouts/header" %>
   <%= yield %>
 </div>
 

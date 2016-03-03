@@ -1,0 +1,26 @@
+<%= link_to "Home", root_path %>|
+
+<% if user_logged_in? %>
+  Hello <%= current_user.full_name %>
+  <%= link_to "Sign Out", sessions_path, method: :delete %>
+<% else %>
+  <%= link_to "Sign Up", new_session_path %>
+  <%= link_to "Sign Up", new_user_path %>
+<% end %>
+
+<%= link_to "New Campaign", new_campaign_path %>
+<% if notice %>
+  <div class="alert alert-success">
+    <%= notice %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<% elsif alert  %>
+  <div class="alert alert-danger">
+    <%= alert %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<% end %>

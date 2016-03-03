@@ -1,0 +1,14 @@
+<%# .titleize method is a built-in rails method %>
+<h1><%= @campaign.name.titleize %></h1>
+
+<p><%= @campaign.description %></p>
+
+<p>Goal: <%= number_to_currency(@campaign.goal)  %></p>
+
+<p>End Date: <%= formatted_date_time(@campaign.end_date) %>
+
+<%= link_to "Edit", edit_campaign_path(@campaign), class: "btn btn-info" %>
+<%= link_to "Destroy", @campaign,
+            method: :delete,
+            data: {confirm: "Are you sure?"},
+            class: "btn btn-danger"  %>

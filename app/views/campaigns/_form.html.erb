@@ -1,0 +1,10 @@
+<%= simple_form_for @campaign do |f| %>
+                      <%# label will give you the flexibility to change the label, when you are giveing class
+                      you have to be more specific.  %>
+  <%= f.input :name, label: "Campaign Name", input_html: {class: "abc"} %>
+  <%= f.input :description %>
+  <%= f.input :goal %>
+  <%= f.input :end_date %>
+  <%= f.submit "Save", class: "btn btn-primary" %>
+  <%=  %>
+<% end %>

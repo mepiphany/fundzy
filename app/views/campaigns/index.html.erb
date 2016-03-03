@@ -1,5 +1,8 @@
 <h1>Recent Campaigns</h1>
 <h2>All Campaigns</h2>
 <% @campaigns.each do |campaign| %>
+  <div class="well">
 <%= link_to campaign.name.upcase, campaign %>
+  </div>
+
 <% end %>

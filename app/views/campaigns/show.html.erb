@@ -6,11 +6,19 @@
 <p>Goal: <%= number_to_currency(@campaign.goal)  %></p>
 
 <p>End Date: <%= formatted_date_time(@campaign.end_date) %>
-
-<%= image_tag @campaign.image.url(:large) %>
-
+<% if @campaign.image %>
+  <%= image_tag @campaign.image.url(:large) %>
+<% end %>
 <%= link_to "Edit", edit_campaign_path(@campaign), class: "btn btn-info" %>
 <%= link_to "Destroy", @campaign,
             method: :delete,
             data: {confirm: "Are you sure?"},
             class: "btn btn-danger"  %>
+            
+<h2>Rewards</h2>
+<% @campaign.rewards.each do |reward| %>
+  <div class="well col-md-3">
+    <h3><%= reward.title %></h3>
+    <p><%= number_to_currency(reward.amount) %></p>
+  </div>
+<% end %>

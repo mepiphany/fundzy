@@ -7,6 +7,12 @@
   <%= f.input :end_date %>
   <%= f.input :image %>
   <%# f.file_field :image %>
+  <%= f.simple_fields_for :rewards do |r|  %>
+      <%= r.input :title %>
+      <%= r.input :amount, as: :string %>
+      <%= r.input :_destroy, as: :boolean %>
+      <hr>
+  <% end %>
   <%= f.submit "Save", class: "btn btn-primary" %>
   <%=  %>
 <% end %>

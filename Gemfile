@@ -34,6 +34,8 @@ gem 'quiet_assets'
 gem 'mini_magick'
 gem 'fog'
 
+gem 'cocoon'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

@@ -7,12 +7,13 @@
   <%= f.input :end_date %>
   <%= f.input :image %>
   <%# f.file_field :image %>
-  <%= f.simple_fields_for :rewards do |r|  %>
-      <%= r.input :title %>
-      <%= r.input :amount, as: :string %>
-      <%= r.input :_destroy, as: :boolean %>
-      <hr>
-  <% end %>
+  <div id="rewards">
+    <%= f.simple_fields_for :rewards do |r|  %>
+      <%= render "reward_fields", f: r %>
+    <% end %>
+    <div class="links">
+        <%= link_to_add_association "add Reward", f, :rewards %>
+    </div>
+  </div>
   <%= f.submit "Save", class: "btn btn-primary" %>
-  <%=  %>
 <% end %>

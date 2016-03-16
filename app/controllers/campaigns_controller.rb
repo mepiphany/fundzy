@@ -32,7 +32,7 @@ class CampaignsController < ApplicationController
  end
 
  def index
-   @campaigns = Campaign.all
+   @campaigns = Campaign.order("created_at ASC").published
 
  end
 

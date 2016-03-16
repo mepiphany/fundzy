@@ -6,6 +6,14 @@
 <p>Goal: <%= number_to_currency(@campaign.goal)  %></p>
 
 <p>End Date: <%= formatted_date_time(@campaign.end_date) %>
+
+<div class="label label-default"><%= @campaign.aasm_state %></div>
+
+<% if @campaign.draft? %>
+  <%= link_to "Publish", campaign_publishings_path(@campaign), method: :post, class: "btn btn-primary",
+                                                               data: {confirm: "Are you sure?"}     %>
+<% end %>
+
 <% if @campaign.image %>
   <%= image_tag @campaign.image.url(:large) %>
 <% end %>
@@ -14,7 +22,7 @@
             method: :delete,
             data: {confirm: "Are you sure?"},
             class: "btn btn-danger"  %>
-            
+
 <h2>Rewards</h2>
 <% @campaign.rewards.each do |reward| %>
   <div class="well col-md-3">

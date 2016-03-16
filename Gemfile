@@ -36,6 +36,8 @@ gem 'fog'
 
 gem 'cocoon'
 
+gem 'aasm'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

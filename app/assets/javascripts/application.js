@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap/alert
+//= require underscore
+//= require gmaps/google
 //= require cocoon
 //= require_tree .

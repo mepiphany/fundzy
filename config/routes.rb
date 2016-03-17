@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :my_campaigns, only: [:index]
+
+  resources :nearby_campaigns, only: [:index]
 
   resources :campaigns do
     resources :pledges, only: [:create, :destroy]
@@ -11,7 +14,8 @@ Rails.application.routes.draw do
     delete :destroy, on: :collection
   end
 
-  resources :my_campaigns, only: [:index]
+
+
 
 
   root "campaigns#index"

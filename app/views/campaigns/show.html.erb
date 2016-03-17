@@ -17,6 +17,11 @@
 <% if @campaign.image %>
   <%= image_tag @campaign.image.url(:large) %>
 <% end %>
+
+
+
+
+
 <%= link_to "Edit", edit_campaign_path(@campaign), class: "btn btn-info" %>
 <%= link_to "Destroy", @campaign,
             method: :delete,

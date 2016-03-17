@@ -32,6 +32,9 @@ class Campaign < ActiveRecord::Base
 
   include AASM
 
+  geocoded_by :address
+  after_validation :geocode
+
   # setting the whiny_transitions: false option makes it so that it won't
  # throw an exception when an invalid transition happen
 

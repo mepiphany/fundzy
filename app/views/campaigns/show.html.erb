@@ -18,7 +18,25 @@
   <%= image_tag @campaign.image.url(:large) %>
 <% end %>
 
-
+<% if @campaign.longitude && @campaign.latitude %>
+  <div style='width: 800px;'>
+    <div id="map" style='width: 800px; height: 400px;'></div>
+  </div>
+  <script>
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers([
+      {
+        "lat": <%= @campaign.latitude %>,
+        "lng": <%= @campaign.longitude %>,
+        "infowindow": "hello CodeCore!"
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+  </script>
+<% end %>
 
 
 

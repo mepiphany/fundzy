@@ -26,6 +26,7 @@ class CampaignsController < ApplicationController
 
  def show
    @campaign = Campaign.friendly.find params[:id]
+   @comment = Comment.new
    #find_by method will return nil, but in find, it will raise an error
    # The default render is show
    #  render :show

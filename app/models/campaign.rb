@@ -23,6 +23,9 @@ class Campaign < ActiveRecord::Base
   #                       with value `true` as part of the `reward` params it
   #                       will delete the reward record all together.
   has_many :rewards, dependent: :destroy
+
+  has_many :comments, as: :commentable
+
   accepts_nested_attributes_for :rewards, reject_if: :all_blank, allow_destroy: true
 
   # this is CarrierWave config:

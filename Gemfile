@@ -42,6 +42,7 @@ gem 'gmaps4rails'
 gem 'underscore-rails'
 gem "sinatra"
 gem 'sidekiq'
+gem 'draper'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

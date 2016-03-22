@@ -1,18 +1,17 @@
 <%# .titleize method is a built-in rails method %>
-<h1><%= @campaign.name.titleize %></h1>
+<h1><%= @campaign.name %></h1>
 
 <p><%= @campaign.description %></p>
 
-<p>Goal: <%= number_to_currency(@campaign.goal)  %></p>
+<p>Goal: <%= @campaign.goal  %></p>
 
-<p>End Date: <%= formatted_date_time(@campaign.end_date) %>
+<p>End Date: <%= @campaign.end_date %>
 
-<div class="label label-default"><%= @campaign.aasm_state %></div>
 
-<% if @campaign.draft? %>
-  <%= link_to "Publish", campaign_publishings_path(@campaign), method: :post, class: "btn btn-primary",
-                                                               data: {confirm: "Are you sure?"}     %>
-<% end %>
+<%= @campaign.state_label %>
+
+<%= @campaign.publish_button %>
+
 
 <% if @campaign.image %>
   <%= image_tag @campaign.image.url(:large) %>

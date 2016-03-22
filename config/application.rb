@@ -35,6 +35,7 @@ module Fundsy
     # this is specifically for rails console
     config.autoload_paths << Rails.root.join("app", "jobs")
     config.autoload_paths << Rails.root.join("app", "uploaders")
+    config.autoload_paths << Rails.root.join("app", "decorators")
     config.active_job.queue_adapter = :sidekiq
   end
 end

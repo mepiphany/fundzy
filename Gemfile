@@ -43,6 +43,7 @@ gem 'underscore-rails'
 gem "sinatra"
 gem 'sidekiq'
 gem 'draper'
+gem 'virtus'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

@@ -10,13 +10,14 @@ class CampaignsController < ApplicationController
   end
 
   def create
-    @campaign = Campaign.new(campaign_params)
-    @campaign.user = current_user
+    service = Campaign::CreateCampaign.new(user: current_user,
+                                            params: campaign_params)
 
-    if @campaign.save
+    if service.call
       flash[:notice] = "Campaign created!"
-      redirect_to campaign_path(@campaign)
+      redirect_to campaign_path(service.campaign)
     else
+      @campaign = service.campaign
       build_associated_rewards
       flash[:alert] = "Campaign not created!"
       render :new

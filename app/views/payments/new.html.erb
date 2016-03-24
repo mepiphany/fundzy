@@ -1,0 +1,25 @@
+<h1>Make a Payment</h1>
+
+<div class="alert alert-danger hide" id="stripe-error-message"></div>
+
+
+<%= form_tag "", id: 'payment-form' do %>
+  <div class="form-group">
+    <%= label_tag :card_number %>
+    <%= text_field_tag :card_number, "", class: 'form-control', data: {stripe: "number"} %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :cvc  %>
+    <%= text_field_tag :cvc, "", class: 'form-control', data: {stripe: "cvc"} %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :card_expiry %>
+    <%= select_month Date.today, {add_month_numbers: true}, {class: "form-control", data: {stripe: "exp-month"}} %>
+    <%= select_year Date.today, {start_year: Time.now.year, end_year: Time.now.year + 10}, {class: "form-control", data: {stripe: "exp-year"}}  %>
+  </div>
+<%= submit_tag "make The payment", class: 'btn btn-primary' %>
+<% end %>
+
+<%= form_tag pledge_payments_path(@pledge), id: 'server-form' do %>
+  <%= hidden_field_tag :stripe_token %>
+<% end %>

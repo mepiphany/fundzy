@@ -27,6 +27,7 @@ class CampaignsController < ApplicationController
   def show
     # render :show
     @comment = Comment.new
+    @pledge = Pledge.new
   end
 
   def index
